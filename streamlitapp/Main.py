@@ -2,8 +2,9 @@
 # nécessaires pour que le code s'exécute.
 import streamlit as st
 import pandas as pd
-import data.data as dd
+from data import Dataclass
 
+dd = Dataclass()
 # Cette fonction affiche une carte avec un seul marqueur à une latitude et une longitude spécifiques.
 
 def affichage_carte () :
