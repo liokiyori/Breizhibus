@@ -2,8 +2,9 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
-import data.data as dd
+from data import Dataclass
 
+dd = Dataclass()
 # Création histogramme de la fréquentation par ligne
 def plot_histogram(data):
     fig = plt.figure(figsize=(10, 6))
@@ -32,7 +33,6 @@ def plot_lineplot(data):
 
 # Remplissage histogramme
 def frequentation_lineplot():
-
     frequentation_heures = dd.page_2_frequentation_lineplot()
     frequentation_heures["Horaire"] = frequentation_heures["Horaire"].astype(str)
     plot_lineplot(frequentation_heures)

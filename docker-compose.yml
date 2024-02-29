@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  streamlitapp:
+    build:
+      context: .
+      dockerfile: dockerfile.streamlit
+    ports:
+      - 8501:8501
+    depends_on:
+      - db
+    volumes:
+      - ./streamlitapp:/streamlitapp
+  db:
+    build:
+      context: .
+      dockerfile: dockerfile.bdd
+    ports:
+      - 3306:3306
