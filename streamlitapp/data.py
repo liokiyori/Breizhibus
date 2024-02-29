@@ -9,8 +9,8 @@ class Dataclass:
     def connection_mysql(self):
         user = "Breizhibus"
         password = "Breizhibus"
-        host = "localhost"
-        port = "3307"
+        host = "db"
+        port = "3306"
         database = "Breizhibus"
         cnx = mysqlpy.connect(user=user, password=password, host=host, port=port, database=database)
         return cnx

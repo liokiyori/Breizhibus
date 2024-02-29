@@ -33,7 +33,6 @@ def plot_lineplot(data):
 
 # Remplissage histogramme
 def frequentation_lineplot():
-
     frequentation_heures = dd.page_2_frequentation_lineplot()
     frequentation_heures["Horaire"] = frequentation_heures["Horaire"].astype(str)
     plot_lineplot(frequentation_heures)

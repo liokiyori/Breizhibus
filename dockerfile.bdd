@@ -1,0 +1,15 @@
+# Utilisez une image de base MySQL
+FROM mysql:8.0
+
+# Définissez les variables d'environnement pour MySQL
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=Breizhibus
+
+
+# Ajoutez le script SQL pour initialiser la base de données
+ADD Breizhibus.sql /docker-entrypoint-initdb.d
+
+# Ajoutez le script SQL pour créer l'utilisateur
+ADD init.sql /docker-entrypoint-initdb.d
+
+EXPOSE 3306
