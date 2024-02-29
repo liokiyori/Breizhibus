@@ -11,7 +11,7 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copie du reste de l'application dans le conteneur
-COPY streamlitapp/ .
+COPY streamlitapp/ /streamlitapp/
 
 # Exposez le port pour Streamlit
 EXPOSE 8501

@@ -8,6 +8,8 @@ services:
       - 8501:8501
     depends_on:
       - db
+    volumes:
+      - ./streamlitapp:/streamlitapp
   db:
     build:
       context: .
